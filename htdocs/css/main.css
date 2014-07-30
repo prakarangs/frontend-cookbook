@@ -1,3 +1,17 @@
+html {
+  font-size: 100%;
+}
+
+.elastic-body {
+  font-size: 1em;
+  font-family: georgia, serif;
+  text-align: center;
+  color: #444;
+  background: #e6e6e6;
+  padding: 0;
+  margin: 0;
+}
+
 *,
 *:before,
 *:after {
@@ -15,27 +29,27 @@
   margin: 0 auto;
 }
 
-header {
+.grid-f5-header {
   background: #333;
 }
 
-main .big-caption {
+.grid-f5-main .big-caption {
   background: red;
 }
-main .two-windows {
+.grid-f5-main .two-windows {
   background: orange;
 }
-main .two-windows .parent-nest {
+.grid-f5-main .two-windows .parent-nest {
   background: skyblue;
 }
-main .two-windows .parent-nest .nest-wrapper {
+.grid-f5-main .two-windows .parent-nest .nest-wrapper {
   background: yellow;
 }
-main .four-article {
+.grid-f5-main .four-article {
   background: green;
 }
 
-footer {
+.grid-f5-footer {
   background: hotpink;
 }
 
