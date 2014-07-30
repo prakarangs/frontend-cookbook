@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lesson: Foundation _grid mixin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    
+    <div class="container">
+      <header>
+        <div class="row">
+          <div class="col-12">
+            <h1>Basic Layout using grid mixin of Foundation.</h1>
+          </div>
+        </div>
+        </header><!-- /header -->
+        
+        <main>
+        <div class="big-caption">
+          <div class="row">
+            <div class="col-12">
+              <h2>Big Caption Over Here.</h2>
+              <button type="button"><a href="#">Click</a></button>
+            </div>
+          </div>
+          </div><!-- /big caption -->
+          
+          <div class="two-windows">
+            <div class="row">
+              <div class="col-6">
+                <div class="parent-nest">
+                  <h2>Hello there! I'm half of something.</h2>
+                  <div class="row-nest">
+                    <div class="col-3 col-pull-1">
+                      <div class="nest-wrapper">
+                        <p>I nest and pull-1 here</p>
+                        </div><!-- wrapper -->
+                      </div>
+                      <div class="col-3">
+                        <p>I nest 2 too!</p>
+                      </div>
+                      <div class="col-3">
+                        <p>I nest 3 here</p>
+                      </div>
+                      <div class="col-3 col-push-2">
+                        <div class="nest-wrapper">
+                          <p>I nest and push-2</p>
+                        </div><!-- wrapper -->
+                      </div>
+                  </div>
+                      
+                </div><!-- /parent-nest -->
+              </div><!-- /col6 -->
+              <div class="col-6">
+                <h2>Hello there! I'm half of something.</h2>
+              </div>
+            </div>
+          </div><!-- /two-windows -->
+
+
+          <div class="four-article">
+            <div class="row">
+              <div class="col-3">
+                <p>In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns, you can tag the last column with a class of end in order to override that behavior.</p>
+              </div>
+              <div class="col-3">
+                 <p>In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns, you can tag the last column with a class of end in order to override that behavior.</p>
+              </div>
+              <div class="col-3">
+                 <p>In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns, you can tag the last column with a class of end in order to override that behavior.</p>
+              </div>
+              <div class="col-3">
+                 <p>In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns, you can tag the last column with a class of end in order to override that behavior.</p>
+              </div>
+            </div>
+           </div><!-- /four-article -->
+        </main>
+
+     <footer>
+        <div class="row">
+          <div class="col-12">
+            <h2>Footer</h2>
+          </div>
+        </div>
+     </footer>
+
+   </div><!-- /container -->
+
+ </body>
+</html>

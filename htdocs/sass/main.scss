@@ -1,0 +1,128 @@
+@import "compass";
+// Zurb Foundation
+$include-html-classes : false;  			// Eliminate unused styles
+$default-float        : left;   			// Default float
+$opposite-direction   : right;  			// Default oposite direction
+@import "foundation/components/grid";	// Grid system
+
+//==== Variable ====//
+$screen-mobile: 320px;
+$screen-tab-portrait:768px;
+$screen-tab-landscape: 1024px;
+$screen-desktop: 992px;
+$screen-lg-desktop: 1200px;
+
+
+*,
+*:before,
+*:after {
+	@include box-sizing(border-box);
+	margin:0;
+	padding:0;
+	position: relative;
+}
+
+/* mobile */
+.container {
+	max-width:$screen-mobile;
+	margin: 0 auto;
+}
+
+header {
+	background: #333;
+}
+
+main {
+	.big-caption {
+		background: red;
+	}
+	.two-windows {
+		background: orange;
+		.parent-nest {
+			background: skyblue;
+			.nest-wrapper {
+				background: yellow;
+			}
+		}
+	}
+	.four-article {
+		background: green;
+	}
+}
+
+footer {
+	background: hotpink;
+}
+
+//Grid system
+.row {
+  @include grid-row();
+}
+
+.col-12 {
+	@include grid-column(12);
+}
+.col-6 {
+	@include grid-column(12);
+}
+.col-3 {
+	@include grid-column(12);
+}
+
+/* tablet Portrait screen 768px */
+
+@media (min-width:$screen-tab-portrait) {
+
+		.container {
+			max-width:$screen-tab-portrait;
+			margin: 0 auto;
+		}
+		.row {
+			@include grid-row();
+		}
+		.col-12 {
+			@include grid-column(12);
+		}
+		.col-6 {
+			@include grid-column(6);
+		}
+		.col-3 {
+			@include grid-column(3);
+		}
+}
+
+/* Medium screen desktop */
+@media (min-width:$screen-desktop) {
+		.container {
+			max-width: $screen-desktop;
+		}
+}
+
+@media (min-width: $screen-tab-landscape) {
+	.container {
+		max-width: $screen-tab-landscape;
+	}
+}
+
+@media (min-width:$screen-lg-desktop) {
+	.container {
+		max-width: $screen-lg-desktop;
+	}
+	.col-offset-3 {
+		@include grid-column($offset:3);
+	}
+	.col-pull-1 {
+		@include grid-column($pull:1);
+	}
+
+	.col-push-2 {
+		@include grid-column($push:2);
+	}
+}
+
+
+
+
+
+
+
