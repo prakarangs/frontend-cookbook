@@ -12,6 +12,7 @@ $screen-tab-portrait:768px;
 $screen-tab-landscape: 1024px;
 $screen-desktop: 992px;
 $screen-lg-desktop: 1200px;
+$row-width: 1280px;
 
 
 *,
@@ -35,7 +36,7 @@ $screen-lg-desktop: 1200px;
 
 .grid-f5-main {
 	.big-caption {
-		background: red;
+		background: white;
 	}
 	.two-windows {
 		background: orange;
@@ -120,7 +121,6 @@ $screen-lg-desktop: 1200px;
 		@include grid-column($push:2);
 	}
 }
-
 
 
 

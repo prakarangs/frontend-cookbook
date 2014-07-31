@@ -34,7 +34,7 @@ html {
 }
 
 .grid-f5-main .big-caption {
-  background: red;
+  background: white;
 }
 .grid-f5-main .two-windows {
   background: orange;
@@ -59,7 +59,7 @@ html {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: em-calc(1000);
+  max-width: 1280px;
   overflow: hidden;
   *zoom: 1;
 }
@@ -101,7 +101,7 @@ html {
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    max-width: em-calc(1000);
+    max-width: 1280px;
     overflow: hidden;
     *zoom: 1;
   }
