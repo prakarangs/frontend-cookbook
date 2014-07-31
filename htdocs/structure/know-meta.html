@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Viewport Meta Tag: Controll your mobile browsers.</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scale=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
   </head>
   <body>
-   
+   <div class="container">
    <header>
    <div class="row">
     <div class="col-12">
@@ -122,6 +123,21 @@
         <p>When we develop a mobile website for different devices, nearly every device has a different
           resolution and screen size. This can be difficult to design a website that works among all
           of them simultaneously. To start off it is a good idea to look at what screen size and resolutions are out there. Then we might have a better idea of how much space we have to work with.</p>
+
+      <div class="code-wrapper">
+      <code><</code>
+      <code>meta</code>
+      <code>name</code>
+      <code>=</code>
+      <code>"viewport"</code>
+      <code>content</code>
+      <code>=</code>
+      <code>"width=device-width,</code>
+      <code>initial-scale=1,</code>
+      <code>user-scalable=no"</code>
+      <code>></code>
+      </div><!-- code wrapper-->
+
         <span>Here is a link to <a href="http://viewportsizes.com/">Viewport Sizes collection.</a></span>
         <span>See also <a href="https://developer.apple.com/library/ios/documentation/appleapplications/reference/safariwebcontent/usingtheviewport/usingtheviewport.html">Safari Web content guide.</a></span>
       </div>
@@ -129,6 +145,6 @@
   </div><!-- /size-table -->
 
  </main>
- 
+ </div><!-- /container -->
   </body>
 </html>
