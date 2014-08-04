@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Block Grid</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="thumbnail" id="thumbnail-gallery">
+        <li>
+          <a class="" href="#">
+            <img src="../img/tattoo_1.jpg" alt="Zoom on hover">
+            <span class="share">S</span>
+            <span class="download">D</span>
+            <span class="caption">Caption one <br>
+            Bambi Tattoo with rainbow color.<br>
+            Artist: A BCAS</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../img/tattoo_2.jpg" alt="Zoom on hover">
+            <span class="caption">Caption two</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../img/tattoo_3.jpg" alt="Zoom on hover">
+            <span class="caption">Caption Three<br>
+            The birdy in the back. <br>
+            Artist: Anonymous</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../img/tattoo_4.jpg" alt="Zoom on hover">
+            <span class="caption">Caption Four<br>
+            Tigerzilla vol.2<br>
+            Artist: Tigerzillarrr</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../img/tattoo_5.jpg" alt="Zoom on hover">
+            <span class="caption">Caption Five<br>
+            Root tree. Empowering by nature.<br>
+            Artist: Natural science</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../img/tattoo_6.jpg" alt="Zoom on hover">
+            <span class="caption">
+            Ink girl photograhpy<br>
+            Artist: Someone</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="counter">
+      <span class="value">0</span> Selected.
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      var count              = 0,
+          $thumbnail_gallery = $('#thumbnail-gallery');
+
+
+      $thumbnail_gallery.find('a').on('click', function(evt) {
+        $(evt.currentTarget).toggleClass('active');
+          count = $thumbnail_gallery.find('.active').length;
+          $('.counter .value').text(count);
+      });
+
+
+    });
+    </script>
+  </body>
+</html>

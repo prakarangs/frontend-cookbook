@@ -1,0 +1,49 @@
+.form-to-promise {
+	background: #FFEF73;
+
+	.wrap {
+		height:94px;
+		padding-top:42px;
+		padding-bottom:40px;
+	}
+	.close-icon {
+		position: absolute;
+		top:15px;
+		right: 15px;
+	}
+	.form-group {
+		margin-left:110px;
+		width:410px;
+		.client-info { height: 32px; }
+		.client-info,
+		.promise-text {
+			width: 100%;
+			margin-bottom: 5px;
+			border: 1px solid rgba(201,201,201,0.8);
+			border-radius: 4px;
+		}
+		.promise-text { height:140px;}
+	}
+	.inner {
+		margin-left:38px;
+	}
+	.wood-button {
+		display: block;
+		margin-left:80px;
+		color: #fff;
+		.wood-button-text {
+			background: brown;
+			border-radius: 10px;
+		}
+	}
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: brown;
+}

@@ -1,0 +1,27 @@
+
+//This style is only for grid-foundation page.
+.grid-f5-header {
+	background: #333;
+}
+
+.grid-f5-main {
+	.big-caption {
+		background: red;
+	}
+	.two-windows {
+		background: orange;
+		.parent-nest {
+			background: skyblue;
+			.nest-wrapper {
+				background: yellow;
+			}
+		}
+	}
+	.four-article {
+		background: green;
+	}
+}
+
+.grid-f5-footer {
+	background: hotpink;
+}
