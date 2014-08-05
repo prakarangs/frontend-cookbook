@@ -280,44 +280,87 @@ meta.foundation-mq-large {
     float: left;
   }
 }
+header {
+  background: #f0ecdf;
+  width: 100%;
+}
+
+.btn-toggle {
+  background: green;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+}
+.btn-toggle.collapse {
+  background: red;
+}
+
+.nav-main {
+  background: #20bc98;
+  display: none;
+  width: 100%;
+}
+.nav-main ul {
+  list-style: none;
+}
+
 .wrapper {
   width: 100%;
   margin: 0 auto;
 }
-.wrapper .thumbnail {
+
+.thumbnail {
   background: #333;
   font-size: 0;
 }
-.wrapper li {
+.thumbnail li {
   display: inline-block;
   font-size: 14px;
   padding: 20px;
   width: 33.33%;
 }
-.wrapper a {
+.thumbnail li.disabled {
+  opacity: 0.5;
+}
+.thumbnail li.disabled a {
+  cursor: default;
+}
+.thumbnail li.disabled a img {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.thumbnail li.disabled .caption {
+  display: none;
+}
+.thumbnail a {
   color: #fff;
   display: block;
   overflow: hidden;
   position: relative;
 }
-.wrapper a:hover img {
+.thumbnail a:hover img {
   opacity: 0.6;
   transform: scale(1.2, 1.2);
   transition: transform 1s ease-in-out;
 }
-.wrapper a:hover .caption {
+.thumbnail a:hover .caption {
   bottom: 0;
   transition: bottom .50s ease-in-out;
 }
-.wrapper a:hover .share,
-.wrapper a:hover .download {
+.thumbnail a:hover .share,
+.thumbnail a:hover .download {
   opacity: 1;
   transition: opacity .50s ease-in-out;
 }
-.wrapper a.active {
+.thumbnail a.active {
   border: 2px solid red;
 }
-.wrapper .share {
+.thumbnail .share {
   opacity: 0;
   background: green;
   display: block;
@@ -328,7 +371,7 @@ meta.foundation-mq-large {
   width: 20px;
   z-index: 99;
 }
-.wrapper .download {
+.thumbnail .download {
   opacity: 0;
   background: red;
   display: block;
@@ -339,14 +382,14 @@ meta.foundation-mq-large {
   width: 20px;
   z-index: 99;
 }
-.wrapper img {
+.thumbnail img {
   width: 100%;
   opacity: 1;
   transition: opacity 1s ease-in-out;
   transform: scale(1, 1);
   transition: transform 1s ease-in-out;
 }
-.wrapper .caption {
+.thumbnail .caption {
   background: rgba(0, 0, 0, 0.75);
   bottom: -50%;
   display: block;
@@ -357,11 +400,82 @@ meta.foundation-mq-large {
 }
 
 .counter {
+  opacity: 0.4;
   background: #fff;
   color: #000;
   height: 25px;
   line-height: 25px;
   left: 25px;
   position: fixed;
-  top: 25px;
+  top: 5px;
+}
+
+.header-main {
+  background: #f1deb5;
+  float: left;
+  width: 40%;
+}
+@media (min-width: 768px) {
+  .header-main {
+    width: 100%;
+  }
+}
+
+.content-main {
+  background: #1ac1b0;
+  width: 60%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .content-main {
+    width: 100%;
+  }
+}
+
+.btn-lang {
+  background: green;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  top: 5px;
+  left: 32%;
+  padding: 10px;
+  position: absolute;
+  width: 30px;
+}
+@media (min-width: 768px) {
+  .btn-lang {
+    left: 95%;
+  }
+}
+
+.btn-contact {
+  background: #903d78;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  top: 5px;
+  left: 25%;
+  padding: 10px;
+  position: absolute;
+  width: 30px;
+}
+@media (min-width: 768px) {
+  .btn-contact {
+    left: 92%;
+  }
+}
+
+.collapse {
+  background: red;
+}
+
+.nav-lang {
+  background: #b7ff90;
+  display: none;
+}
+
+.nav-contact {
+  background: #c389e1;
+  display: none;
 }

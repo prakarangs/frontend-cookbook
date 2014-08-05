@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
+    <header>
+      <h1>Header</h1>
+      <span class="btn-toggle" id="btn-toggle">--</span>
+      <nav class="nav-main" id="nav-main">
+        <ul>
+          <li><a href="#">Link1</a></li>
+          <li><a href="#">Link2</a></li>
+          <li><a href="#">Link3</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="wrapper">
       <ul class="thumbnail" id="thumbnail-gallery">
         <li>
@@ -22,9 +34,9 @@
             Artist: A BCAS</span>
           </a>
         </li>
-        <li>
+        <li class="disabled">
           <a href="#">
-            <img src="../img/tattoo_2.jpg" alt="Zoom on hover">
+            <img src="../img/tattoo_2.jpg" alt="disabled">
             <span class="caption">Caption two</span>
           </a>
         </li>
@@ -73,9 +85,15 @@
 
       var count              = 0,
           $thumbnail_gallery = $('#thumbnail-gallery');
+          $btn_toggle = $('#btn-toggle');
 
+      $btn_toggle.click(function(){
+        $('#nav-main').slideToggle('fast', function(){
+          $btn_toggle.toggleClass('collapse');
+        });
+      });
 
-      $thumbnail_gallery.find('a').on('click', function(evt) {
+      $thumbnail_gallery.find('li').not('.disabled').find('a').on('click', function(evt) {
         $(evt.currentTarget).toggleClass('active');
           count = $thumbnail_gallery.find('.active').length;
           $('.counter .value').text(count);

@@ -11,4 +11,11 @@ $include-html-classes : false;  			// Eliminate unused styles
 $default-float        : left;   			// Default float
 $opposite-direction   : right;  			// Default oposite direction
 
-//_block-grid
+//clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

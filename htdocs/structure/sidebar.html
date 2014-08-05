@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Table Of Content</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <header class="header-main">
+      <h1>Header</h1>
+      <span class="btn-lang" id="btn-lang">L</span>
+      <span class="btn-contact" id="btn-contact">C</span>
+      <nav class="nav-lang" id="nav-lang">
+        <ul>
+          <li><a href="#">Eng</a></li>
+          <li><a href="#">Jap</a></li>
+          <li><a href="#">De</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-contact" id="nav-contact">
+        <ul>
+          <li><a href="#">Email</a></li>
+          <li><a href="#">Tel</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content-main">
+      <h2>Content</h2>
+      <p>
+        The purpose of the CSS float property is, generally speaking, to push a
+        block-level element to the left or right, taking it out of the flow in
+        relation to other block elements. This allows naturally-flowing content
+        to wrap around the floated element. This concept is similar to what you
+        see every day in print literature, where photos and other graphic elements
+        are aligned to one side while other content (usually text) flows naturally
+        around the left- or right-aligned element.
+      </p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      var $btn_lang    = $('#btn-lang'),
+          $btn_contact = $('#btn-contact'),
+          $nav_lang    = $('#nav-lang'),
+          $nav_contact = $('#nav-contact');
+
+      $btn_lang.on('click', function() {
+        $nav_contact.slideUp('fast');
+        $nav_lang.slideToggle('fast', function() {
+          $btn_lang.toggleClass('collapse');
+          $btn_contact.removeClass('collapse');
+        });
+      });
+
+      $btn_contact.on('click', function() {
+        $nav_lang.slideUp('fast');
+        $nav_contact.slideToggle('fast', function() {
+          $btn_contact.toggleClass('collapse');
+          $btn_lang.removeClass('collapse');
+        });
+      });
+
+    });
+    </script>
+  </body>
+</html>

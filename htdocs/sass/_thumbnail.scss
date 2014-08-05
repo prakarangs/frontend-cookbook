@@ -1,16 +1,63 @@
+@import "compass";
+@import "settings";
+
+header {
+  background: #f0ecdf;
+  width:100%;
+}
+
+.btn-toggle {
+  background: green;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  padding: 10px;
+  position: absolute;
+  top:5px;
+  right: 5px;
+  width: 30px;
+  &.collapse {
+    background: red;
+  }
+}
+
+.nav-main {
+  background: #20bc98;
+  display: none;
+  width: 100%;
+  ul {
+    list-style: none;
+  }
+}
 
 .wrapper {
   width: 100%;
   margin: 0 auto;
-  .thumbnail {
-    background: #333;
-    font-size: 0;
-  }
+}
+
+.thumbnail {
+  background: #333;
+  font-size: 0;
   li {
     display: inline-block;
     font-size: 14px;
     padding: 20px;
     width: 33.33%;
+
+    // Extends
+    &.disabled {
+      opacity: 0.5;
+      a {
+        cursor: default;
+        img {
+          opacity: 1;
+          transform: scale(1, 1);
+        }
+      }
+      .caption {
+        display: none;
+      }
+    }
   }
   a {
     color: #fff;
@@ -71,25 +118,21 @@
   .caption  {
     background: rgba(0, 0, 0, 0.75);
     bottom: -50%;
-    // opacity:0;
-    // transition: opacity 1s ease-in-out;
     display: block;
     color: #fff;
     line-height:18px;
-    // margin-left: 5px;
-    // padding: 5px;
     position: absolute;
     width: 100%;
   }
-
 }
 
 .counter {
+  opacity: 0.4;
   background: #fff;
   color: #000;
   height: 25px;
   line-height: 25px;
   left: 25px;
   position: fixed;
-  top: 25px;
+  top: 5px;
 }
