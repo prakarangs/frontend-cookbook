@@ -1,0 +1,53 @@
+// LAYOUT
+// A higher level of abstraction for modules.
+// This applies layout (margin, padding, sizing, positioning).
+// Layouts hold one or more modules together.
+// -----------------------------------------------------------------------------
+
+// Header
+header {
+  background: url("../../img/logo.png") no-repeat;
+  background-position: 0 20px;
+  padding-top:40px;
+  padding-bottom: 40px;
+  h1 { padding-left: 150px; }
+}
+
+
+// -----------------------------------------------------------------------------
+// Navbar
+
+
+// -----------------------------------------------------------------------------
+// Footer
+footer {}
+
+
+// -----------------------------------------------------------------------------
+// Main
+main { overflow: hidden; }
+.post-header,
+.content {
+  background-color: $bkg-color-primary;
+}
+
+.content {
+  border-top: 5px solid #343434;
+}
+
+// -----------------------------------------------------------------------------
+// Section
+.section {}
+
+
+// -----------------------------------------------------------------------------
+// Utilities
+.btn-menu {
+  display: block;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+
+// -----------------------------------------------------------------------------
+// Custom Submodules
