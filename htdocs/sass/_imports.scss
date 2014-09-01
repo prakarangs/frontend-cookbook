@@ -2,6 +2,7 @@
 // Where variables can be changed and customized
 // -----------------------------------------------------------------------------
 // Zurb Foundation
-$include-html-classes : false;  			// Eliminate unused styles
+$include-html-grid-classes: $include-html-classes;
+$include-xl-html-grid-classes: false;
 $default-float        : left;   			// Default float
 $opposite-direction   : right;  			// Default oposite direction

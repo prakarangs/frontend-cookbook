@@ -44,16 +44,11 @@ $line-height-base       : 20px;
 
 
 // Grid
-$grid-fluid             : false;
+$grid-row-width: rem-calc(960);
+$grid-column-gutter: rem-calc(20);
+$grid-total-columns: 6;
 
-$grid-width-small       : 100%;     // Base
-$grid-width-medium      : 768px;
-$grid-width-large       : 1280px;
 
-@if $grid-fluid {
-  $grid-width-medium    : 100%;
-  $grid-width-large     : 100%;
-}
 
 $grid-padding-small     : 15px;     // Base
 $grid-padding-medium    : 20px;

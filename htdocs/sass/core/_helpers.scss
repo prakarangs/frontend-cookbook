@@ -15,3 +15,58 @@
   padding-left: $padding;
   padding-right: $padding;
 }
+// ------------------------------------
+// Px to Em
+// Set up $base-font-size in your setting will calculate the base font-size to overall page.
+// Usage: font-size: em(int);
+@function em($px, $base: $base-font-size) {
+  @return #{$px/$base}em;
+}
+
+// ------------------------------------
+// Cal width percentage value for pixel
+// $target = target module in px;
+// $context = container size in px;
+// Usage: .my-module { width: calc-percent(650px, 1000px);}
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+
+// ------------------------------------
+// Link color from compass
+// @include link-colors($normal, $hover, $active, $visited, $focus);
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+  @if $hover {
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+// ----------------------------------
+// Unstyle Link from compass
+@mixin unstyled-link {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  &:active, &:focus {
+    outline: none;
+  }
+}

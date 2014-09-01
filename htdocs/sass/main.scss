@@ -24,9 +24,11 @@
 @import "imports";                    // Import configuration settings
 
 @import "compass";                    // Core framework
-@import "foundation/components/grid"; // Grid system framework
+@import "vender/foundation-grid";     // Grid system framwork
 
 @import "vendor/sukiyaki";            // Function and mixin library
+@import "vendor/functions";            // _functions.scss Foundation 5
+@import "vendor/global";            // _functions.scss Foundation 5
 // -----------------------------------------------------------------------------
 // CORE
 // Represents the tools and materials required at the ground level of a project.
@@ -46,16 +48,4 @@
 @import "structure/grid";             // Grid
 @import "structure/layout";           // Layout
 // -----------------------------------------------------------------------------
-// MODULES
-
-@import "modules/modules";            // Modules
-@import "modules/widgets";            // Widgets
-@import "modules/components";         // Components
-// -----------------------------------------------------------------------------
-// PAGES
-
-@import "pages/master";               // Master template
-// -----------------------------------------------------------------------------
-// QUICK STYLES
-
-@import "inbox";                      // Inbox
+// COMPONENTS
