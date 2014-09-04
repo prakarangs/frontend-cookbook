@@ -5,9 +5,12 @@
 
 // Small screens
 // Foundation settings
-$row-width: $grid-row-width;
-$total-columns: $grid-total-columns;
-$last-child-float: $opposite-direction !default;
+$row-width			: $grid-width-small;     // Row width
+$column-gutter	: $grid-gutter-small;    // Column gutter
+$total-columns	: $grid-column-small;    // Total column
+
+// Custom settings
+$row-padding		: $grid-padding-small;   // Row padding
 
 // Container
 .container {
@@ -15,25 +18,111 @@ $last-child-float: $opposite-direction !default;
 	width: $row-width;
 }
 
-// Row
+// Rows
 .row {
   @include grid-row();
-  .medium-6 {
-    @include grid-column(6);
-  }
-  .medium-5 {
-    @include grid-column(5);
-  }
-  .medium-4 {
-    @include grid-column(4);
-  }
-  .medium-3 {
-    @include grid-column(3);
-  }
-  .medium-2 {
-    @include grid-column(2);
-  }
-  .medium-1 {
-    @include grid-column(1);
+	@include grid-padding($row-padding);
+  position: relative;
+
+  .row {
+    @include grid-row($behavior: nest);
+    @include grid-padding(0);
   }
 }
+.row-collapse {
+  @include grid-row($behavior: collapse);
+}
+
+// Columns
+%grid-column {
+  @include grid-column($columns: $total-columns, $float: flase);
+}
+@for $i from 1 through $total-columns {
+	.col-#{$i} { @extend %grid-column; }
+}
+// -----------------------------------------------------------------------------
+// Medium screens
+@media only screen and (min-width: $grid-breakpoint-medium) {
+
+// Foundation settings
+$row-width			: $grid-width-medium;    // Row width
+$column-gutter	: $grid-gutter-medium;   // Column gutter
+$total-columns	: $grid-column-medium;   // Total column
+
+// Custom settings
+$row-padding		: $grid-padding-medium;  // Row padding
+
+// Container
+.container { width: $row-width; }
+
+// Rows
+.row {
+  @include grid-row();
+	@include grid-padding($row-padding);
+
+  .row {
+    @include grid-row($behavior: nest);
+    @include grid-padding(0);
+  }
+}
+
+// Columns
+@for $i from 1 through $total-columns {
+	.col-#{$i} { @include grid-column($columns: $i); }
+}
+
+// Column offset
+@for $i from 1 through $total-columns {
+	.offset-#{$i} {
+		margin-left: grid-calc($colNumber: $i, $totalColumns: $total-columns);
+	}
+}
+
+}
+// -----------------------------------------------------------------------------
+// Large screens
+@media only screen and (min-width: $grid-breakpoint-large) {
+
+// Foundation settings
+$row-width			: $grid-width-large;     // Row width
+$column-gutter	: $grid-gutter-large;    // Column gutter
+$total-columns	: $grid-column-large;    // Total column
+
+// Custom settings
+$row-padding		: $grid-padding-large;   // Row padding
+
+// Container
+.container { width: $row-width; }
+
+// Rows
+.row {
+  @include grid-row();
+	@include grid-padding($row-padding);
+
+  .row {
+    @include grid-row($behavior: nest);
+    @include grid-padding(0);
+  }
+}
+
+// Columns
+@for $i from 1 through $total-columns {
+	.col-#{$i} { @include grid-column($columns: $i); }
+}
+
+}
+
+.container {
+  color: #fff;
+}
+.inner {
+	text-align: center;
+  margin-top: 5px;
+}
+
+.six { background: #9e17b9; }
+.five { background: #d54747;}
+.four { background: #434343; }
+.three { background: #00c099; }
+.two { background: #f1b427; }
+.one { background: #00add9; }

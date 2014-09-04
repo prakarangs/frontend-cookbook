@@ -6,7 +6,7 @@
 
 // Regular
 @include font-face(
-  "htdocs",
+  "Font-Regular",
   font-files("Font-Regular.ttf")
 );
 
@@ -44,11 +44,16 @@ $line-height-base       : 20px;
 
 
 // Grid
-$grid-row-width: rem-calc(960);
-$grid-column-gutter: rem-calc(20);
-$grid-total-columns: 6;
+$grid-fluid             : false;
 
+$grid-width-small       : 100%;     // Base
+$grid-width-medium      : 768px;
+$grid-width-large       : 1280px;
 
+@if $grid-fluid {
+  $grid-width-medium    : 100%;
+  $grid-width-large     : 100%;
+}
 
 $grid-padding-small     : 15px;     // Base
 $grid-padding-medium    : 20px;
@@ -56,7 +61,7 @@ $grid-padding-large     : 30px;
 
 $grid-gutter-small      : 15px;     // Base
 $grid-gutter-medium     : 20px;
-$grid-gutter-large      : 30px;
+$grid-gutter-large      : 5px;  // for only testing _grid.scss Foundation 5
 
 $grid-column-small      : 6;        // Base
 $grid-column-medium     : 6;
@@ -68,7 +73,7 @@ $grid-breakpoint-large  : 1280px;
 
 
 // Colors
-$color-base             : #0c0c0c;
+$color-base             : #666;
 $color-light            : #999;
 $color-bright           : #fff;
 $color-primary          : #000;
@@ -77,8 +82,8 @@ $color-selection        : #b3d4fc;
 
 
 // Backgrounds
-$bkg-color-base         : #f3efeb;
-$bkg-color-primary      : rgba(255, 255, 255, 0.5);
+$bkg-color-base         : #fff;
+$bkg-color-primary      : #000;
 $bkg-color-highlight    : #bbb;
 
 

@@ -21,14 +21,14 @@
 // Streamlines development by providing a number of utilities and tools
 // to make writing CSS files easier and faster.
 
-@import "imports";                    // Import configuration settings
+@import "imports";                             // Import configuration settings
 
-@import "compass";                    // Core framework
-@import "vender/foundation-grid";     // Grid system framwork
+@import "compass";                            // Core framework
+@import "vendor/foundation-5/functions";     // Gems functions
+@import "vendor/foundation-5/global";        // Gems Global
+@import "vendor/foundation-5/grid";         // Gems Grid
 
-@import "vendor/sukiyaki";            // Function and mixin library
-@import "vendor/functions";            // _functions.scss Foundation 5
-@import "vendor/global";            // _functions.scss Foundation 5
+@import "vendor/sukiyaki";                  // Function and mixin library
 // -----------------------------------------------------------------------------
 // CORE
 // Represents the tools and materials required at the ground level of a project.
@@ -48,4 +48,16 @@
 @import "structure/grid";             // Grid
 @import "structure/layout";           // Layout
 // -----------------------------------------------------------------------------
-// COMPONENTS
+// MODULES
+
+@import "modules/modules";            // Modules
+@import "modules/widgets";            // Widgets
+@import "modules/components";         // Components
+// -----------------------------------------------------------------------------
+// PAGES
+
+@import "pages/master";               // Master template
+// -----------------------------------------------------------------------------
+// QUICK STYLES
+
+@import "inbox";                      // Inbox
